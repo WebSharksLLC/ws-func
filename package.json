@@ -2,7 +2,7 @@
   "name": "ws-helper",
   "version": "1.0.0",
   "description": "Helper functions for my projects",
-  "main": "index.js",
+  "main": "src/libs/index.js",
   "scripts": {
     "test": "jest"
   },
