@@ -1,5 +1,5 @@
 {
-  "name": "ws-helper",
+  "name": "ws-func",
   "version": "1.0.0",
   "description": "Helper functions for my projects",
   "main": "src/libs/index.js",
@@ -9,18 +9,22 @@
   "keywords": [
     "node.js",
     "javascript",
-    "helper"
+    "helper",
+    "base64",
+    "string",
+    "date",
+    "time"
   ],
   "author": "SUR0",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebSharksLLC/ws-helper.git"
+    "url": "git+https://github.com/WebSharksLLC/ws-func.git"
   },
   "bugs": {
-    "url": "https://github.com/WebSharksLLC/ws-helper/issues"
+    "url": "https://github.com/WebSharksLLC/ws-func/issues"
   },
-  "homepage": "https://github.com/WebSharksLLC/ws-helper#readme",
+  "homepage": "https://github.com/WebSharksLLC/ws-func#readme",
   "dependencies": {
     "mime-types": "^2.1.35"
   },
