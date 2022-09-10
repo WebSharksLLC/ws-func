@@ -1,5 +1,5 @@
 {
-  "name": "helper-functions",
+  "name": "ws-helper",
   "version": "1.0.0",
   "description": "Helper functions for my projects",
   "main": "index.js",
@@ -15,12 +15,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebSharksLLC/helper-functions.git"
+    "url": "git+https://github.com/WebSharksLLC/ws-helper.git"
   },
   "bugs": {
-    "url": "https://github.com/WebSharksLLC/helper-functions/issues"
+    "url": "https://github.com/WebSharksLLC/ws-helper/issues"
   },
-  "homepage": "https://github.com/WebSharksLLC/helper-functions#readme",
+  "homepage": "https://github.com/WebSharksLLC/ws-helper#readme",
   "dependencies": {
     "mime-types": "^2.1.35"
   },
