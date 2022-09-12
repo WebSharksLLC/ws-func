@@ -21,7 +21,6 @@ test('isBase64String', () => {
         '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACAhITMkM1EwMFFCLy8vQiccHBwcJyIXFxcXFyIRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBIjMzNCY0IhgYIhQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAYABgMBIgACEQEDEQH/xABVAAEBAAAAAAAAAAAAAAAAAAAAAxAAAQQCAwEAAAAAAAAAAAAAAgABAxQEIxIkMxMBAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIE7MwkbOUJDJWx+ZjXATitx2/h2bEWvX5Y0npQ7aIiD/9k='
     )).toBeTruthy();
 })
-
 test('isBase64File', () => {
     expect(base64Helper.isBase64File(null)).toBeFalsy();
     expect(base64Helper.isBase64File('')).toBeFalsy();
@@ -43,20 +42,17 @@ test('isBase64File', () => {
     )).toBeTruthy();
 
 })
-
 test('stringToBase64File', () => {
     expect(() => base64Helper.stringToBase64File(null)).toThrow(TypeError)
     expect(base64Helper.stringToBase64File('uuLMhh==', 'image/png')).toEqual('data:image/png;base64,uuLMhh==');
     expect(base64Helper.stringToBase64File('test string', 'image/png')).toEqual('data:image/png;base64,dGVzdCBzdHJpbmc=');
 
 })
-
 test('stringToBase64', () => {
     expect(() => base64Helper.stringToBase64(null)).toThrow(TypeError)
     expect(base64Helper.stringToBase64('test string')).toEqual('dGVzdCBzdHJpbmc=');
 
 })
-
 test('base64ToString', () => {
     expect(() => base64Helper.base64ToString(null)).toThrow(TypeError)
     expect(() => base64Helper.base64ToString('test string')).toThrow(TypeError)
@@ -64,7 +60,6 @@ test('base64ToString', () => {
     expect(base64Helper.base64ToString('dGVzdCBzdHJpbmc=')).toEqual('test string')
 
 })
-
 test('base64ToBuffer', () => {
     expect(() => base64Helper.base64ToBuffer(null)).toThrow(TypeError)
     expect(() => base64Helper.base64ToBuffer('test string')).toThrow(TypeError)
@@ -72,7 +67,6 @@ test('base64ToBuffer', () => {
     expect(typeof base64Helper.base64ToBuffer('data:image/png;base64,uuLMhh==')).toEqual('object')
 
 })
-
 test('saveBase64ToFileSync', () => {
     const imageBase64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACAhITMkM1EwMFFCLy8vQiccHBwcJyIXFxcXFyIRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBIjMzNCY0IhgYIhQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAYABgMBIgACEQEDEQH/xABVAAEBAAAAAAAAAAAAAAAAAAAAAxAAAQQCAwEAAAAAAAAAAAAAAgABAxQEIxIkMxMBAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIE7MwkbOUJDJWx+ZjXATitx2/h2bEWvX5Y0npQ7aIiD/9k='
     const imagePath = __dirname + '/../test/files/test.jpg'
@@ -84,7 +78,6 @@ test('saveBase64ToFileSync', () => {
     expect(filePath).toEqual(imagePath)
 
 })
-
 test('saveBase64ToFile', async () => {
     const imageBase64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACAhITMkM1EwMFFCLy8vQiccHBwcJyIXFxcXFyIRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBIjMzNCY0IhgYIhQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAYABgMBIgACEQEDEQH/xABVAAEBAAAAAAAAAAAAAAAAAAAAAxAAAQQCAwEAAAAAAAAAAAAAAgABAxQEIxIkMxMBAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIE7MwkbOUJDJWx+ZjXATitx2/h2bEWvX5Y0npQ7aIiD/9k='
     const imagePath = __dirname + '/../test/files/test1.jpg'
@@ -95,7 +88,6 @@ test('saveBase64ToFile', async () => {
     expect(filePath).toEqual(imagePath)
 
 })
-
 test('loadFileAsBase64', async () => {
     const imageBase64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACAhITMkM1EwMFFCLy8vQiccHBwcJyIXFxcXFyIRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBIjMzNCY0IhgYIhQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAYABgMBIgACEQEDEQH/xABVAAEBAAAAAAAAAAAAAAAAAAAAAxAAAQQCAwEAAAAAAAAAAAAAAgABAxQEIxIkMxMBAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIE7MwkbOUJDJWx+ZjXATitx2/h2bEWvX5Y0npQ7aIiD/9k='
     const imagePath = __dirname + '/../test/files/test1.jpg'
@@ -103,7 +95,6 @@ test('loadFileAsBase64', async () => {
     expect(base64String).toEqual(imageBase64)
 
 })
-
 test('loadFileAsBase64Sync', () => {
     const imageBase64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACAhITMkM1EwMFFCLy8vQiccHBwcJyIXFxcXFyIRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBIjMzNCY0IhgYIhQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAYABgMBIgACEQEDEQH/xABVAAEBAAAAAAAAAAAAAAAAAAAAAxAAAQQCAwEAAAAAAAAAAAAAAgABAxQEIxIkMxMBAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIE7MwkbOUJDJWx+ZjXATitx2/h2bEWvX5Y0npQ7aIiD/9k='
     const imagePath = __dirname + '/../test/files/test1.jpg'
